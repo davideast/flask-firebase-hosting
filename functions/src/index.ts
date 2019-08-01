@@ -7,7 +7,7 @@ function toggle(value: any) {
   return !!parseInt(value, 10) ? 0 : 1;
 }
 
-export const changeStatus = functions.pubsub.schedule('every 15 seconds').onRun(async context => {
+export const changeStatus = functions.pubsub.schedule('every 1 minutes').onRun(async context => {
   const db = app.firestore();
   const sfRef = db.collection('weather').doc('SF');
   const snap = await sfRef.get();
