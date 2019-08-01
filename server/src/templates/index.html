@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %}
+<span id="emoji" class="text-xl">🌁</span>
+<h1 class="text-xl text-center">
+  It's 
+  <span id="status">{{ context.current_title }}</span> 
+</h1>
+<h5 class="text-center">{{ context.server_time }}</h5>
+{% endblock %}
